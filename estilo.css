@@ -1,0 +1,49 @@
+/*---------------------------------
+    VARIÁVEIS GLOBAIS
+*/
+:root {
+    /*Configuração da Fonte*/
+    --fonte-texto: "Tahoma";
+
+    /*Cores*/
+    --cor-texto-variacao: #789986;
+    --cor-borda: #afc7b9;
+}
+/*--------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: var(--fonte-texto);
+}
+
+/*Limpa a configuração padrão dos links feitas pelo navegador*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: blue;
+}
+
+/*-------------------------------
+    CABEÇALHO
+*/
+.nome{
+    font-size: 28px; /*Define o tamanho da fonte*/
+    font-weight: bold; /*Fonte em negrito*/
+}
+.nome span{
+    color: var(--cor-texto-variacao); /*Define cor do texto*/
+}
+.cabecalho{
+    background-color: rgba(245,247,250,0.85); /*Define a cor de fundo com o 0.85 aplicando uma pequena transparência*/
+    backdrop-filter: blur(8px); /*Aplica o efeito blur ao passar o conteúdo por trás*/
+    position: sticky; /*Define a posição "parada" para o cabeçalho, sem rolagem*/
+    z-index: 100; /*Trás o cabeçalho pra frente pro conteúdo passar atrás*/
+    top: 0; /*Define que o cabeçalho ficará parado no topo*/
+    border-bottom: 1px solid var(--cor-borda); /*Cria uma borda inferior no cabeçalho*/
+}
+/*-------------------------------*/
