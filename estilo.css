@@ -1,15 +1,16 @@
-/*---------------------------------
-    VARIÁVEIS GLOBAIS
-*/
+/*----------------VARIÁVEIS GLOBAIS-----------------*/
 :root {
     /*Configuração da Fonte*/
     --fonte-texto: "Tahoma";
 
     /*Cores*/
-    --cor-texto-variacao: #789986;
-    --cor-borda: #afc7b9;
+    --cor-texto-variacao: #89abb4;
+    --cor-borda: #7e7e7e;
+    --cor-fundo: #fab4b6;
+    --cor-titulo-tag: #789986;
 }
 /*--------------------------------*/
+
 *{
     margin: 0;
     padding: 0;
@@ -24,13 +25,18 @@ a {
     color: inherit;
 }
 
-h1 {
-    color: blue;
-}
+/*Estilização padrão dos títulos tipo "tag HTML" de cada seção*/
+.tag-secao{
+    display:inline-block;
+    font-size:26px;
+    color: var(--cor-titulo-tag);
+    background-color: rgba(15,157,139,0.1);
+    border-radius: 6px; /*Bordas arredondadas*/
+    margin-bottom: 16px; /*Margem inferior*/
+    padding: 4px 12px;  /*Espaçamento topo e direita*/
+}   
 
-/*-------------------------------
-    CABEÇALHO
-*/
+/*--------------CABEÇALHO-----------------*/
 .nome{
     font-size: 28px; /*Define o tamanho da fonte*/
     font-weight: bold; /*Fonte em negrito*/
@@ -76,3 +82,9 @@ h1 {
     width: 100%;
 }
 /*-------------------------------*/
+
+/*--------------APRESENTAÇÃO--------------*/
+.apresentacao{
+    padding: 96px;
+    background-color: var(--cor-fundo);
+}
