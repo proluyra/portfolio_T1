@@ -2,12 +2,16 @@
 :root {
     /*Configuração da Fonte*/
     --fonte-texto: "Tahoma";
+    --fonte-titulo: "Space Grotesk";
+    --fonte-mono: "JetBrains Mono";
 
     /*Cores*/
-    --cor-texto-variacao: #89abb4;
+    --cor-texto-variacao: #789986;
     --cor-borda: #7e7e7e;
     --cor-fundo: #fab4b6;
     --cor-titulo-tag: #789986;
+    --cor-texto-suave: #667085;
+    --cor-clara: #afc7b9;
 }
 /*--------------------------------*/
 
@@ -28,13 +32,43 @@ a {
 /*Estilização padrão dos títulos tipo "tag HTML" de cada seção*/
 .tag-secao{
     display:inline-block;
-    font-size:26px;
+    font-family: var(--fonte-mono);
+    font-size:14px;
     color: var(--cor-titulo-tag);
     background-color: rgba(15,157,139,0.1);
     border-radius: 6px; /*Bordas arredondadas*/
     margin-bottom: 16px; /*Margem inferior*/
     padding: 4px 12px;  /*Espaçamento topo e direita*/
-}   
+}
+
+/*Estilização de BOTÕES: dois estilos*/
+.botao{
+    display: inline-block;
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    font-weight: 600; /*Negrito*/
+    padding: 12px 28px; /*Espaçamento no topo e na direita*/
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.botao:hover{
+    transform: translateY(-2px); /*Efeito que move o botão para cima quando passa o mouse*/
+}
+.botao-primario{
+    background-color: var(--cor-texto-variacao);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(15,157,139,0.35);
+}
+.botao-primario:hover{ /*Botao Layout 1 quando o mouse passa em cima*/
+    background-color: var(--cor-clara);
+}
+.botao-secundario{
+    border: 2px solid var(--cor-clara); /*Borda do botão*/
+}
+.botao-secundario:hover{ /*Botao Layout 2 quando o mouse passa em cima*/
+    border-color: var(--cor-texto-variacao); /*Cor da borda do botão*/
+    color: var(--cor-texto-variacao); /*Cor da fonte*/
+}
 
 /*--------------CABEÇALHO-----------------*/
 .nome{
@@ -88,3 +122,47 @@ a {
     padding: 96px;
     background-color: var(--cor-fundo);
 }
+.apresentacao .container{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+}
+.apresentacao-titulo{
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+.apresentacao-titulo .destaque{
+    color:var(--cor-texto-variacao);
+}
+.apresentacao-cargo{
+    font-family: var(--fonte-mono);
+    color: var(--cor-texto-suave);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.apresentacao-bio{
+    color: var(--cor-texto-suave);
+    font-size: 16px;
+    max-width: 480px; /*Tamanho máximo do elemento*/
+    margin-bottom: 32px; /*Margem inferior*/
+    line-height: 1.5; /*Espaçamento entre linhas*/
+}
+.apresentacao-foto{
+    position: relative;
+}
+.apresentacao-foto img{
+    border-radius: 24px; /*Bordas arredondadas*/
+    background-color: rgba(245,247,250,0.85);
+}
+.apresentacao-botoes{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
